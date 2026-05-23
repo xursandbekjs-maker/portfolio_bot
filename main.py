@@ -10,6 +10,6 @@ bot = telebot.TeleBot(TOKEN, parse_mode=None)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-	bot.reply_to(message, "Howdy, how are you doing?")
+	bot.reply_to(message, "Assalomu aleykum, men Xursandbek Jumaboyev. \nBu mening portfolio botim. \nQuyidagi bo'limlardan birini tanlang:")
 	
 bot.infinity_polling()
