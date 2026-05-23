@@ -19,10 +19,16 @@ def send_welcome(message):
     bot.send_message(message.chat.id, text, reply_markup=keyboard)
 
 
-@bot.message_handler(func=lambda m: True)
-def replybutton_handler(message):
-    if message.text == "Men haqimda":
-        bot.send_message(message.chat.id, "Bu qism qo'shiladi")
-    bot.reply_to(message, message.text)
-	
+@bot.message_handler(func=lambda m: m.text == "Men haqimda")
+def aboutme_handler(message):
+    text = "Men Xursandbek Jumaboyev frontend dasturchiman."
+
+    bot.send_message(message.chat.id, text)
+
+@bot.message_handler(func=lambda m: m.text == "Loyihalarim")
+def projects_handler(message):
+    text = "Bu haqida tez orada qo'shiladi."
+
+    bot.send_message(message.chat.id, text)
+
 bot.infinity_polling()
