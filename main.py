@@ -18,5 +18,11 @@ def send_welcome(message):
     text = "Assalomu aleykum, men Xursandbek Jumaboyev. \nBu mening portfolio botim. \nQuyidagi bo'limlardan birini tanlang"
     bot.send_message(message.chat.id, text, reply_markup=keyboard)
 
+
+@bot.message_handler(func=lambda m: True)
+def replybutton_handler(message):
+    if message.text == "Men haqimda":
+        bot.send_message(message.chat.id, "Bu qism qo'shiladi")
+    bot.reply_to(message, message.text)
 	
 bot.infinity_polling()
