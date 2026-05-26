@@ -22,7 +22,7 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda m: m.text == "Men haqimda")
 def aboutme_handler(message):
-    text = "Men Xursandbek Jumaboyev frontend dasturchiman.\n..."
+    text = "Men Xursandbek Jumaboyev frontend dasturchiman.\n"
     bot.send_message(message.chat.id, text, reply_markup=main_keyboard())  # ✅
 
 @bot.message_handler(func=lambda m: m.text == "Loyihalarim")
