@@ -1,1 +1,1 @@
-xursandbek_jumaboyev_portfolio_bot
+#xursandbek_jumaboyev_portfolio_bot
