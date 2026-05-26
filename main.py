@@ -13,8 +13,11 @@ bot = telebot.TeleBot(TOKEN, parse_mode=None)
 def send_welcome(message):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton("Men haqimda")
-    btn2 = types.KeyboardButton("Loyihalarim")	
+    btn2 = types.KeyboardButton("Loyihalarim")
+    btn3 = types.KeyboardButton("Bog'lanish")
+    btn4 = types.KeyboardButton("Bilimlarim")	
     keyboard.add(btn1, btn2)
+    keyboard.add(btn3, btn4)
     text = "Assalomu aleykum, men Xursandbek Jumaboyev. \nBu mening portfolio botim. \nQuyidagi bo'limlardan birini tanlang"
     bot.send_message(message.chat.id, text, reply_markup=keyboard)
 
