@@ -24,14 +24,25 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda m: m.text == "Men haqimda")
 def aboutme_handler(message):
-    text = "Men Xursandbek Jumaboyev frontend dasturchiman."
+    text = "Men Xursandbek Jumaboyev frontend dasturchiman.\nHozirda ReactJS va NextJS bilan ishlayman.\nShuningdek, backend uchun NodeJS va ExpressJS dan foydalanaman.\nMening maqsadim, foydalanuvchilarga qulay va samarali veb-ilovalar yaratishdir."
 
-    bot.send_message(message.chat.id, text)
+    bot.send_message(message.chat.id, text, reply_markup="keyboard")
 
 @bot.message_handler(func=lambda m: m.text == "Loyihalarim")
 def projects_handler(message):
-    text = "Bu haqida tez orada qo'shiladi."
+    text = "Mening loyihalarim:\n1. Portfolio veb-sayti - ReactJS va NextJS yordamida yaratilgan shaxsiy portfolio saytim.\n2. Blog platformasi - NodeJS va ExpressJS yordamida yaratilgan blog platformasi, foydalanuvchilar o'z maqolalarini yaratishlari va boshqalar bilan bo'lishishlari mumkin.\n3. To-do ro'yxati ilovasi - ReactJS yordamida yaratilgan to-do ro'yxati ilovasi, foydalanuvchilar o'z vazifalarini qo'shishlari, tahrirlashlari va o'chirishlari mumkin."
 
-    bot.send_message(message.chat.id, text)
+    bot.send_message(message.chat.id, text, reply_markup="keyboard")
 
+@bot.message_handler(func=lambda m: m.text == "Bog'lanish")
+def contact_handler(message):
+    text = "Men bilan bog'lanish uchun quyidagi manzillar orqali yozishingiz mumkin:\nEmail: xursandbek.jumaboyev@example.com\nTelegram: @xursandbek_jumaboyev"
+
+    bot.send_message(message.chat.id, text, reply_markup="keyboard")
+
+@bot.message_handler(func=lambda m: m.text == "Bilimlarim")
+def skills_handler(message):
+    text = "Mening bilimlarim:\n- Frontend: ReactJS, NextJS, HTML, CSS, JavaScript\n- Backend: NodeJS, ExpressJS\n- Boshqa: Git, MongoDB"
+
+    bot.send_message(message.chat.id, text, reply_markup="keyboard")
 bot.infinity_polling()
