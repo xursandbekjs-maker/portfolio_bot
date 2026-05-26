@@ -22,22 +22,22 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda m: m.text == "Men haqimda")
 def aboutme_handler(message):
-    text = "Men Xursandbek Jumaboyev frontend dasturchiman.\n"
+    text = "Men Xursandbek Jumaboyev frontend dasturchiman.\n Men 2025-yildan beri dasturlash bilan shug'ullanaman va ko'plab loyihalarda ishtirok etganman."
     bot.send_message(message.chat.id, text, reply_markup=main_keyboard())  # ✅
 
 @bot.message_handler(func=lambda m: m.text == "Loyihalarim")
 def projects_handler(message):
-    text = "Mening loyihalarim:\n..."
+    text = "Mening loyihalarim:\n1. Portfolio veb-sayti\n2. Telegram bot\n3. E-commerce platformasi\n4. Blog sayti"
     bot.send_message(message.chat.id, text, reply_markup=main_keyboard())  # ✅
 
 @bot.message_handler(func=lambda m: m.text == "Bog'lanish")
 def contact_handler(message):
-    text = "Men bilan bog'lanish...\n..."
+    text = "Men bilan bog'lanish .\n Email:xursandbekjumaboyev987@gmail.com\n Telegram: @jumaboyev_x27\n LinkedIn: https://www.linkedin.com/in/xursandbek-jumaboyev-123456789/"
     bot.send_message(message.chat.id, text, reply_markup=main_keyboard())  # ✅
 
 @bot.message_handler(func=lambda m: m.text == "Bilimlarim")
 def skills_handler(message):
-    text = "Mening bilimlarim:\n..."
+    text = "Mening bilimlarim:\n - HTML, CSS, JavaScript\n- React.js\n- Node.js\n- Git va GitHub\n- Responsive dizayn"
     bot.send_message(message.chat.id, text, reply_markup=main_keyboard())  # ✅
 
 bot.infinity_polling()
