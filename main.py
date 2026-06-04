@@ -28,16 +28,16 @@ def aboutme_handler(message):
 @bot.message_handler(func=lambda m: m.text == "Loyihalarim")
 def projects_handler(message):
     text = "Mening loyihalarim:\n1. Portfolio veb-sayti\n2. Telegram bot\n3. E-commerce platformasi\n4. Blog sayti"
-    bot.send_message(message.chat.id, text, reply_markup=main_keyboard())  # ✅
+    bot.send_message(message.chat.id, text, parse_mode="Markdown", reply_markup=main_keyboard())  # ✅
 
 @bot.message_handler(func=lambda m: m.text == "Bog'lanish")
 def contact_handler(message):
     text = "Men bilan bog'lanish .\n Email:xursandbekjumaboyev987@gmail.com\n Telegram: @jumaboyev_x27\n LinkedIn: https://www.linkedin.com/in/xursandbek-jumaboyev-123456789/"
-    bot.send_message(message.chat.id, text, reply_markup=main_keyboard())  # ✅
+    bot.send_message(message.chat.id, text, parse_mode="Markdown", reply_markup=main_keyboard())  # ✅
 
 @bot.message_handler(func=lambda m: m.text == "Bilimlarim")
 def skills_handler(message):
     text = "Mening bilimlarim:\n - HTML, CSS, JavaScript\n- React.js\n- Node.js\n- Git va GitHub\n- Responsive dizayn"
-    bot.send_message(message.chat.id, text, reply_markup=main_keyboard())  # ✅
+    bot.send_message(message.chat.id, text, parse_mode="Markdown", reply_markup=main_keyboard())  # ✅
 
 bot.infinity_polling()
