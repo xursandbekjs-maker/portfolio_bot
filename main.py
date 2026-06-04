@@ -27,10 +27,11 @@ def aboutme_handler(message):
 
 @bot.message_handler(func=lambda m: m.text == "Loyihalarim")
 def projects_handler(message):
-    text = """# Loyihalarim
+    text = """ 
+Loyihalarim
 
-1. **Tibbiy yordam xizmati vebsayti:** [Website] [https://medical-assistance2.vercel.app](https://medical-assistance2.vercel.app)
-2. **Matnni lotindan kirillga, kirilldan lotinga o'tkazuvchi Telegram bot:** [Bot] [https://t.me/kirill_to_latin_converters_bot](https://t.me/kirill_to_latin_converters_bot)"""
+Tibbiy yordam xizmati vebsayti: [Website] [https://medical-assistance2.vercel.app](https://medical-assistance2.vercel.app)
+Matnni lotindan kirillga, kirilldan lotinga o'tkazuvchi Telegram bot: [Bot] [https://t.me/kirill_to_latin_converters_bot](https://t.me/kirill_to_latin_converters_bot)"""
     bot.send_message(message.chat.id, text, parse_mode="Markdown", reply_markup=main_keyboard())  # ✅
 
 @bot.message_handler(func=lambda m: m.text == "Bog'lanish")
